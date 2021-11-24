@@ -1,5 +1,6 @@
 import UserRepository from "../repositories/userRepository.js";
 import UserService from "../services/userService.js";
+import User from "../models/user.js";
 
 console.log("User component yüklendi");
 
@@ -9,6 +10,10 @@ console.log(users);
 
 const userId1 = userService.getById(100);
 console.log(userId1);
+
+console.log(userService.getUsersSorted());
+
+console.log(userService.add(new User(7, "Furkan", "Lebit", "Istanbul", 23)));
 
 // const users = userService.getAll();
 // console.log(users);
